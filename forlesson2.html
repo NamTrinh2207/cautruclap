@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+  <input type="number" id="number" >
+  <input type="button" id="number2" onclick="myFunction()" value="Kiểm tra">
+</label>
+  <p>Kết quả :</p>
+  <p id="number3"></p>
+</body>
+</html>
+<script>
+ function myFunction(){
+   let num = parseInt(document.getElementById("number").value);
+   let total = 0;
+   let i = 1;
+   for (; i<=num; i++){
+     total += i;
+   }
+   document.getElementById("number3").innerHTML= total;
+ }
+</script>
