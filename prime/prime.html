@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    //Nhập và tính toán
+    let number = parseInt(prompt("Nhập số lượng số nguyên tố :"));
+    let count = 0;
+        for (let n = 0; n<1000; n++){
+            if (count==number){
+                break;
+            }
+            if(checkSNT(n)==1 || n==2){
+                document.writeln(n+"<br>");
+                count++;
+            }
+        }
+    //tạo hàm kiểm tra SNT
+    function checkSNT(n){
+        if (n < 2){
+            return 0;
+        }else {
+            for (let i=2; i<n; i++){
+                if (n%i==0){
+                    return 0;
+                }else {
+                    return 1;
+                }
+            }
+        }
+    }
+</script>
