@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  let number = parseInt(prompt("Nhập số lượng số nguyên tố :"));
+  let count = 0;
+  for (let i = 1; i<1000; i++){
+    if (count==number){
+      break;
+    }
+      document.writeln(getFibonacci(i)+"<br>");
+      count++;
+  }
+  //tạo hàm check
+ function getFibonacci(n) {
+    if (n == 1){
+      return 1;
+    }
+    else if ( n == 2){
+      return 1;
+    }
+    else{
+      return getFibonacci(n-1) + getFibonacci(n-2);
+    }
+  }
+</script>
