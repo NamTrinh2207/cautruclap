@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành lồng nhau</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let num;
+    num = "<table border='1' width='300' cellspacing='0' cellpadding='20'>"
+    for (i = 1; i <= 10; i++) {
+        num = num + "<tr>";
+        for (j = 1; j <= 10; j++) {
+            num = num + "<td>" + i * j + "</td>";
+        }
+        num = num + "</tr>";
+    }
+    num = num + "</table>";
+    document.write(num);
+</script>
