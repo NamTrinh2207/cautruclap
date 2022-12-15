@@ -8,21 +8,21 @@
 </body>
 </html>
 <script>
-  let number = parseInt(prompt("Nhập số lượng số nguyên tố :"));
+  let number = parseInt(prompt("Nhập số lượng số fibonacci đầu tiên :"));
   let count = 0;
-  for (let i = 1; i<1000; i++){
+  for (let i = 0; i<1000; i++){
     if (count==number){
       break;
     }
-      document.writeln(getFibonacci(i)+"<br>");
+      document.writeln(getFibonacci(i)+"<br>");// dùng i thay n cho hàm check
       count++;
   }
-  //tạo hàm check
+  //tạo hàm check fibonacci
  function getFibonacci(n) {
     if (n == 1){
       return 1;
     }
-    else if ( n == 2){
+    else if (n == 2){
       return 1;
     }
     else{
