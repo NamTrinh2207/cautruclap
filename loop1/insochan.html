@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = parseInt(prompt("Nhập vào số lần hiển thị số chẵn :"));
+    count = 0;
+    for (let i = 2; i < 1000; i++) {
+        if (count == number) {
+            break;
+        }
+        if (i % 2 == 0) {
+            document.writeln(i);
+            count++;
+        }
+    }
+</script>

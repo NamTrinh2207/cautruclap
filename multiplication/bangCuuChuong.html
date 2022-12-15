@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <title>Bảng cửu chương</title>
 </head>
+<style>
+</style>
 <body>
 <h1>Bảng Cửu Chương</h1>
 </body>
 </html>
 <script>
-    let sout;
-    sout = "<table border='1' width='300' cellpadding='10'>"
-    for (i = 1; i <= 10; i++) {
-        sout = sout + "<tr>";
-        for (j = 2; j <= 9; j++) {
-            sout = sout + "<td>" +j+"x"+i+"="+ i * j + "</td>";
+    let result = "<table border='1' width='auto'  cellpadding='10'>"
+    for (let i = 1; i <= 10; i++) {
+        result = result + "<tr>";
+        for (let j = 2; j <= 9; j++) {
+            result = result + "<td>" + j + " x " + i + " = " + i * j + "</td>";
         }
-        sout = sout + "</tr>";
+        result = result + "</tr>";
     }
-    sout = sout + "</table>";
-    document.write(sout);
+    result = result + "</table>";
+    document.write(result);
 </script>
