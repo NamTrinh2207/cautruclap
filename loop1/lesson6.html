@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let start = 1;
+  let n = 30;
+  let count = 0;
+  let total = 0;
+  document.write("Tổng 30 số tự nhiên chia hết cho 7 là : ")
+  while(count < n){
+    if (start % 7 === 0){
+      total+=start;
+      count++;
+    }
+    start++;
+  }
+  document.writeln(total);
+</script>

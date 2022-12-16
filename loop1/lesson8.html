@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button style="padding: 15px; font-size: 35px" onclick="gamedoanso()">Start</button>
+</body>
+</html>
+<script>
+    function gamedoanso() {
+        let number = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng lớn nhất..."));
+        let random = Math.round(Math.random() * number);
+        let doan = parseInt(prompt("Nhập số bạn muốn đoán :"));
+        let total = 0;
+        while (doan !== random) {
+            total++
+            if (total === 4) {
+                alert("Rất tiếc bạn đã hết số lần đoán :(");
+                break;
+            } else if (doan < random) {
+                alert("Rất tiếc! số bạn đoán bé hơn");
+            } else if (doan > random) {
+                alert("Rất tiếc! số bạn đoán lớn hơn");
+            } else {
+                alert("Chúc mừng bạn đã đoán đúng");
+                break;
+            }
+            doan = parseInt(prompt("Nhập số bạn muốn đoán"));
+        }
+        if (total === 4) {
+            document.write("Rất tếc bạn đã hết số lần đoán");
+        } else {
+            document.write("Chúc mừng bạn đã đoán đúng");
+        }
+    }
+</script>
