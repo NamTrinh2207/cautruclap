@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let index = Number(prompt("Nhập số lượng số fib cần in : "))
+    document.writeln("Dãy Fibonacci cần in là : ");
+    for (let i = 1; i <= index; i++) {
+        document.writeln(checkFibonacci(i));
+    }
+    function checkFibonacci(n) {
+        if (n === 1) {
+            return 1;
+        } else if (n === 2) {
+            return 1;
+        } else {
+            return checkFibonacci(n - 1) + checkFibonacci(n - 2);
+        }
+    }
+</script>

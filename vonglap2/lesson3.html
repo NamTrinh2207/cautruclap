@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình tam giác</title>
+</head>
+<body>
+</body>
+<script>
+    //hình 1
+    for(let i=0; i<5; i++){
+        for (let j=0; j<=i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }document.write("<br>");
+    //hình 2
+    for(let i=5; i>0; i--){
+        for (let j=0; j<i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }document.write("<br>");
+    //hình 3
+    for (let i = 0; i <= 5; i++) {
+        document.write("</br>");
+        for (let j = 0; j < 6 - i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let j = 6 - i; j <= 5; j++) {
+            document.write("*");
+        }
+    }document.write("<br>");
+    //hình 4
+    for (let i = 5; i > 0; i--) {
+        document.write("</br>");
+        for (let j = 0; j < 6 - i; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let j = 6 - i; j <= 5; j++) {
+            document.write("*");
+        }
+    }
+</script>
+</html>
