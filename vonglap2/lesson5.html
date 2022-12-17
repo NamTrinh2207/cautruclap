@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tính lãi suất kép ngân hàng</title>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất kép ngân hàng</title>
 </head>
 <body>
 </body>
 </html>
 <script>
-  const formatter = new Intl.NumberFormat('vn-VI', {
-    style: 'currency',
-    currency: 'VND',
-    minimumFractionDigits: 0,
-  })
-  let tien = parseFloat(prompt("Nhập số vốn ban đầu VND : "));//vốn ban đầu
-  let nam = parseFloat(prompt("Nhập số năm gửi : "));//số năm gửi tiền
-  let tong = tien*(Math.pow(1.07,nam));
-  document.write("Số tiền lãi của "+nam+" năm là : ");
-  document.write(formatter.format(tong));
+    const formatter = new Intl.NumberFormat('vn-VI', {
+        style: 'currency',
+        currency: 'VND',
+        minimumFractionDigits: 0,
+    })
+    let tien = parseFloat(prompt("Nhập số vốn ban đầu VND : "));
+    let nam = parseFloat(prompt("Nhập số năm gửi : "));
+    let tong = tien * (Math.pow(1.00833333, (nam * 12)));
+    document.write("Số tiền lãi suất của " + nam + "năm là : ");
+    document.write(formatter.format(tong));
+    document.write("<br>");
+    let thang = tong / 12;
+    document.write("Số tiền lãi suất của 1 tháng là : ");
+    document.write(formatter.format(thang));
 </script>
