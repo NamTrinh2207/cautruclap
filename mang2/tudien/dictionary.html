@@ -5,18 +5,18 @@
     <title>Từ điển anh việt</title>
 </head>
 <body>
-    <label>Nhập từ :</label>
-    <labe><input type="text" id="translate"></labe>
-    <labe><input type="button" value="Dịch->viet" onclick="engFunction()"></labe>
-    <labe><input type="button" value="Dịch->eng" onclick="vietFunction()"></labe>
-    <p id="result"></p>
+<label>Nhập từ :</label>
+<label><input type="text" id="translate"></label>
+<label><input type="button" value="Dịch->viet" onclick="engFunction()"></label>
+<label><input type="button" value="Dịch->eng" onclick="vietFunction()"></label>
+<p id="result"></p>
 </body>
 </html>
 <script>
     //eng-viet
     function engFunction(){
-        let eng = ["Cat","Dog", "Apple","Pen","Book","Red","Blue"]
-        let viet = ["Mèo","Chó", "Quả táo","Bút","Sách","Đỏ","Xanh"]
+        let eng = ["cat","dog", "apple","pen","book","red","blue"]
+        let viet = ["mèo","chó", "táo","bút","sách","đỏ","xanh"]
         let string = document.getElementById("translate").value;
         let result;
         for (let i=0; i<eng.length; i++){
@@ -28,7 +28,7 @@
                 }
             }
         }
-        document.getElementById("result").innerHTML="Kết quả"+ result;
+        document.getElementById("result").innerHTML="Kết quả : "+ result;
     }
     //viet-eng
     function vietFunction(){
@@ -45,6 +45,6 @@
                 }
             }
         }
-        document.getElementById("result").innerHTML="Kết quả"+ result;
+        document.getElementById("result").innerHTML="Kết quả : "+ result;
     }
 </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Từ điển anh việt</title>
+</head>
+<body>
+<label>Nhập từ :</label>
+<label><input type="text" id="translate"></label>
+<label><input type="button" value="Dịch->viet" onclick="engFunction()"></label>
+<label><input type="button" value="Dịch->eng" onclick="vietFunction()"></label>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  //eng-viet
+  function engFunction(){
+    let eng = ["Cat","Dog", "Apple","Pen","Book","Red","Blue"]
+    let viet = ["Mèo","Chó", "Quả táo","Bút","Sách","Đỏ","Xanh"]
+    let string = document.getElementById("translate").value;
+    let result;
+    for (let i=0; i<eng.length; i++){
+      if (string == eng[i]){
+        for (let k=0; k<viet.length; k++){
+          if (i==k){
+            result = viet[k];
+          }
+        }
+      }
+    }
+    document.getElementById("result").innerHTML="Kết quả : "+ result;
+  }
+  //viet-eng
+  function vietFunction(){
+    let viet = ["Mèo","Chó", "Quả táo","Bút","Sách","Đỏ","Xanh"]
+    let eng = ["Cat","Dog", "Apple","Pen","Book","Red","Blue"]
+    let string = document.getElementById("translate").value;
+    let result;
+    for (let i=0; i<eng.length; i++){
+      if (string == viet[i]){
+        for (let k=0; k<eng.length; k++){
+          if (i==k){
+            result = eng[k];
+          }
+        }
+      }
+    }
+    document.getElementById("result").innerHTML="Kết quả : "+ result;
+  }
+</script>
