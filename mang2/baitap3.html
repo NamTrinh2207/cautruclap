@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay đổi kiểu chữ trong mảng</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let letter = prompt("Nhập vào chuỗi")
+    lett = letter.split("");
+    console.log(lett);
+    for (let i = 0; i < lett.length; i++) {
+        if (lett[i] >= "a" && lett[i] <= "z") {
+            lett[i] = lett[i].toUpperCase();
+        } else {
+            lett[i] = lett[i].toLowerCase();
+        }
+    }
+    document.write(lett.join());
+</script>

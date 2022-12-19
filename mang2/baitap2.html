@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chèn dấu (-) giữa 2  số chẵn</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  const number =prompt("Enter a number : ");
+  const result = [number[0]];
+  for (let i=1; i<number.length; i++){
+    if ((number[i-1]%2===0) && (number[i]%2===0)){
+      result.push("-", number[i]);
+    }else {
+      result.push(number[i]);
+    }
+  }
+  document.write(result.join(""));
+</script>
