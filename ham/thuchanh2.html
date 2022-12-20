@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhệt độ</title>
+</head>
+<body>
+<form>
+    <h1>Temperature Converter</h1>
+    <h4>Type a value in the Fahrenheit field to convert the value</h4>
+    <label> Fahrenheit <input type="number" oninput="tempConverter(this.value)"></label><br>
+</form>
+    <p>Celcius : <span id="outputTemp"></span></p>
+</body>
+</html>
+<script>
+function tempConverter(change) {
+    let result;
+    result = (change-32)/1.8;
+    document.getElementById("outputTemp").innerHTML = result;
+}
+</script>
