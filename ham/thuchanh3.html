@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất trong mảng</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+function checkMinArr(arr){
+    if (arr.length==0){
+        return -1;
+    }
+    let min = arr[0];
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]<min){
+            min= arr[i];
+        }
+    }return min;
+}
+    let arr1= prompt("Nhập vào các phần tử trong mảng ");
+    let min = checkMinArr(arr1)
+    document.write("Phần tử bé nhất trong mảng là : "+min)
+
+</script>
