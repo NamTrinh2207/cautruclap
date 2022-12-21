@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="key" onchange="translate1(this.value)">
+<p id="result"></p>
+<script>
+    // ham co du lieu tra ve
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    //kiem tra tu ta do co trong tu dien hay khong?
+    // ten ham: indexOf
+    // input: tu can kiem tra
+    // output: index trong th la co, -1 neu khong co
+    //logic nen su dung ham co tham so va co return
+    function indexOf(key) {
+        for (let i = 0; i < star1.length; i++) {
+            if (key === star1[i]) return i;
+        }
+        return -1;
+    }
+
+    //nhan du lieu dau vao
+    //thong bao ket qua
+    function translate1(word) {
+        //nhan du lieu tu o input
+        // let word = document.getElementById("key").value;
+        //goi ham indexOf
+        let index = indexOf(word);
+        //thong bao ket qua phu hop
+        if (index === -1) {
+            document.getElementById("result").innerText
+                = "Moi ban nhap lai tu nay khong co trong tu dien cua chung toi";
+        } else {
+            document.getElementById("result").innerText
+                = star2[index];
+        }
+    }
+</script>
+</body>
+</html>

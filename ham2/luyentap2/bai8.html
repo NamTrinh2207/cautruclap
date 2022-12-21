@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập số lượng phần tử trong mảng"))
+    document.writeln("Phần tử đảo ngược trong mảng vừa nhập : ")
+    let arr = []
+    for (let i = 0; i < number; i++) {
+        arr.push(parseInt(prompt("Mời bạn nhập phần tử số " + i)))
+    }
+
+    function checkReverse(newArr) {
+        for (let i = newArr.length - 1; i >= 0; i--) {
+            document.writeln(newArr[i])
+        }
+    }
+
+    checkReverse(arr)
+</script>
+</body>
+</html>

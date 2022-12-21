@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = parseInt(prompt("Nhập vào số nguyên thứ nhất"))
+    let num2 = parseInt(prompt("Nhập vào số nguyên thứ hai"))
+    let num3 = parseInt(prompt("Nhập vào số nguyên thứ ba"))
+
+    function minNumber(newArr) {
+        let min = newArr[0];
+        for (let i = 1; i < newArr.length; i++) {
+            if (min > newArr[i]) {
+                min = newArr[i]
+            }
+        }
+        alert("Min = " + min)
+    }
+
+    let arr = []
+    arr.push(num1, num2, num3)
+    minNumber(arr)
+</script>
+</body>
+</html>

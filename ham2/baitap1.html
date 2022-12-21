@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let number = parseInt(prompt("Nhập số cần check "));
+    checkSnt(number)
+
+    function checkSnt(number) {
+        let count = 0;
+        let checkSnt = false;
+        if (number < 2) {
+            alert(number + " Không phải số nguyên tố")
+        } else {
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count += 1
+                }
+            }
+            if (count === 2) {
+                checkSnt = true;
+            }
+            if (checkSnt) {
+                alert(number + " Là số nguyên tố")
+            } else {
+                alert(number + " Không Là số nguyên tố")
+            }
+        }
+
+    }
+</script>

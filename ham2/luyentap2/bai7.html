@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ hai số nguyên bất kỳ nhập vào</title>
+</head>
+<body>
+<script>
+  let number = parseInt(prompt("Nhập vào số a"))
+  let number1 = parseInt(prompt("Nhập vào số a"))
+  function checkNumber(a,b){
+    let temp=a; a=b; b=temp
+    document.write("a = "+a)
+    document.write("<br>")
+    document.write("b = "+b)
+
+  }
+  checkNumber(number,number1)
+</script>
+</body>
+</html>

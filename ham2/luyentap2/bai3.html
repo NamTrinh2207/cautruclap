@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factorial(a) {
+        let count = 1;
+        for (let i = 1; i <= a; i++) {
+            count *= i;
+        }
+        alert(a + "!" + " = " + count)
+        return count
+    }
+
+    let num = parseInt(prompt("Enter a number"))
+    factorial(num)
+</script>
+</body>
+</html>

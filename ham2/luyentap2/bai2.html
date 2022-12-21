@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi và diện tích hình tròn</title>
+</head>
+<body>
+<script>
+  function acreage(r){
+    let s = Math.pow(r, 2)*3.14
+    document.write("Diện tích là S = "+s)
+    return s
+  }
+
+  function perimeter(r){
+    let p = (r*2)*3.14
+    document.write("Chu vi là P = "+p)
+    return p
+  }
+  let number = parseInt(prompt("Nhập vào bán kính :"))
+  perimeter(number)
+  document.write("<br>")
+  acreage(number)
+
+</script>
+</body>
+</html>

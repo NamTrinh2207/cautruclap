@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["S", "B", "G", "H", "F", "A", "H", "J", "R", "S", "W", "F", "G", "R", "S", "F", "G", "R", "S", "H"]
+    document.writeln(arr)
+    document.writeln("<br>")
+    let count = 0;
+
+    function checkCharacter(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == "S") {
+                count++
+            }
+        }
+        if (count == 0) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
+
+    document.writeln("Số lần suất hiện của ký tự S là :" + checkCharacter(arr));
+
+    checkCharacter(arr)
+</script>
+</body>
+</html>

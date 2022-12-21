@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự số</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập vào ký tự muốn check")
+
+    function checkNumber(number1) {
+        let number2 = parseFloat(number1);
+        if (number1 == number2) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    alert(checkNumber(number));
+</script>
+</body>
+</html>
