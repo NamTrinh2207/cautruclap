@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="300" style="border: 1px solid #000000;"></canvas>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length
+            this.width = width
+        }
+
+        setLength(length) {
+            this.length = length
+        }
+
+        setWidth(width) {
+            this.width = width
+        }
+
+        getLength() {
+            return this.length
+        }
+
+        getWidth() {
+            return this.width
+        }
+
+        getPerimeter() {
+            return (this.length + this.width) * 2
+        }
+
+        getAcreage() {
+            return this.length * this.width
+        }
+    }
+    //khỏi tạo đối tượng
+    let myRectangle = new Rectangle(150, 70);
+    myRectangle.setLength(300)
+    myRectangle.setWidth(150)
+
+    //Vẽ hình chữ nhật
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#fa4b2a';
+    ctx.fillRect(20, 20, myRectangle.getLength(), myRectangle.getWidth())
+
+    //in chu vi và diện tích
+    document.write("<br>")
+    document.write("Chu vi : " + myRectangle.getPerimeter())
+    document.write("<br>")
+    document.write("Diện tích : " + myRectangle.getAcreage())
+
+</script>
+</body>
+</html>
