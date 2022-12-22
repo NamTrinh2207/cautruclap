@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        doC;
+
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        convertCtoF() {
+            return this.doC * 9 / 5 + 32;
+        }
+
+        convertCtoK() {
+            return this.doC + 273.15;
+        }
+    }
+
+    let TemperatureToF = new Temperature(25);
+    let TemperatureTok = new Temperature(25);
+
+    document.write("°C = " + TemperatureToF.doC)
+    document.write("<br>")
+    document.write("°F = " + TemperatureToF.convertCtoF())
+    document.write("<br>")
+    document.write("°k = " + TemperatureTok.convertCtoK())
+</script>
+</body>
+</html>
