@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  class Circle {
+    constructor(radius,color) {
+      this.radius = radius;
+      this.color = color;
+    }
+
+    getRadius(){
+      return this.radius
+    }
+
+    setColor(){
+      return this.color
+    }
+    getArea(){
+      return Math.PI*this.radius*this.radius
+    }
+
+  }
+  let circle = new Circle(2,"blue")
+  alert("Radius : "+circle.getRadius())
+  alert("Area : "+circle.getArea())
+</script>
 </body>
 </html>

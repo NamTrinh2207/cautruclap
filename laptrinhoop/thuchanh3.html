@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Funny Circle</title>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
 </body>
-</html>
+<script>
+    class Circle {
+        constructor(jumpRight,jumpDown,radius) {
+            this.jumpRight = jumpRight;
+            this.jumpDown = jumpDown;
+            this.radius  = radius;
+        }
+        getRandomHex() {
+            return Math.floor(Math.random() * 255);
+        }
+        getRandomColor() {
+            let red = this.getRandomHex();
+            let green = this.getRandomHex();
+            let blue = this.getRandomHex();
+            return "rgb(" + red + "," + green + "," + blue +")";
+        }
+    }
+    function createCircle() {
+        let draw = document.getElementById("myCanvas").getContext("2d");
+        let radius = Math.floor(Math.random() * 80);
+        let jumpRight = Math.random() * window.innerWidth;
+        let jumpDown = Math.random() * window.innerHeight;
+        let circle = new Circle(jumpRight, jumpDown, radius)
+        let color = circle.getRandomColor();
+        draw.beginPath();
+        draw.arc(circle.jumpRight, circle.jumpDown, circle.radius, 0, 2 * Math.PI);
+        draw.fillStyle = color;
+        draw.fill();
+    }
+    function createMultipleCircle() {
+        for( let i = 0; i < 30; i++) {
+            createCircle();
+        }
+    }
+    createMultipleCircle();
+</script>
