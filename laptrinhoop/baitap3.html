@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Phone {
+
+        constructor(name) {
+            this.name = name;
+            this.battery = 100;
+            this.inbox = [];
+            this.sent = [];
+            this.draft = "";
+        }
+
+        checkStatus() {
+            return this.battery > 0;
+        }
+
+        getBattery() {
+            return this.battery;
+        }
+
+        charge() {
+            this.battery = 99;
+        }
+
+        writeMessage(message) {
+            this.draft = message;
+        }
+
+        sendMessage(dtKhac) {
+            let thunhap = this.draft;
+            dtKhac.inbox.push(thunhap);
+            this.sent.push(thunhap);
+            this.draft = "";
+            this.battery--
+        }
+
+
+    }
+
+    let nokia = new Phone("nokia");
+    let iphone = new Phone("iphone");
+
+    alert("status " + nokia.checkStatus())
+    alert("battery " + nokia.battery + " % ")
+
+    nokia.writeMessage("xin chào iphone")
+    nokia.sendMessage(iphone)
+    alert("inbox iphone : " + iphone.inbox)
+
+</script>
 </body>
 </html>
